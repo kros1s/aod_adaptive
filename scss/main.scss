@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+// IF WIDTH > X = true - ОТ
+$md-sm-min: 576px;
+$md-md-min: 768px;
+$md-lg-min: 992px;
+$md-xl-min: 1200px;
+// IF WIDTH < X = true - ДО
+$md-xs-max: 575px;
+$md-sm-max: 767px;
+$md-md-max: 991px;
+$md-lg-max: 1199px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: none;
+    border: none;
+    outline: none;
+    list-style-type: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* HEADER */
+
+@import '_header.scss';
+
+/* MAIN */
+
+/* FOOTER */
+
+@import '_header.scss';
