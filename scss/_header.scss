@@ -2,7 +2,10 @@
     width: 100%;
     height: 100%;
     position: relative;
-    background: center no-repeat url('../img/header/background.png');
+    background-image: url('../img/header/background.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
 }
 
@@ -25,7 +28,7 @@
     text-transform: uppercase;
     text-decoration: none;
     font-family: 'Lato', sans-serif;
-    font-size: 1em;
+    font-size: 16px;
     font-weight: 700;
     color: #4d4959;
     cursor: pointer;
@@ -49,7 +52,7 @@
         height: 1px;
         display: block;
         position: absolute;
-        bottom: -3px;
+        top: -3px;
         right: 0;
         transform: translate(100%);
         background: #64c29e;
