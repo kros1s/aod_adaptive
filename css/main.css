@@ -51,7 +51,7 @@ html, body {
 	cursor: pointer;
 	transition: all 0.15s linear;
 }
-.nav__item.text::before {
+.nav__item._text::before {
 	content: "";
 	width: 100%;
 	height: 1px;
@@ -64,7 +64,7 @@ html, body {
 	opacity: 0;
 	transition: all 0.15s linear;
 }
-.nav__item.text::after {
+.nav__item._text::after {
 	content: "";
 	width: 100%;
 	height: 1px;
@@ -165,8 +165,9 @@ html, body {
 	color: #848789;
 }
 
-.text {
-	max-width: 1135px;
+.text, .text > i {
+	max-width: 1130px;
+	padding: 0 15px;
 	text-align: center;
 	font-family: "Lato", sans-serif;
 	font-size: 16px;
@@ -179,8 +180,13 @@ html, body {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	transition: all 0.2s linear;
 }
 
+.link {
+	cursor: pointer;
+	overflow: hidden;
+}
 .link::after {
 	content: "";
 	width: 100%;
@@ -193,7 +199,10 @@ html, body {
 	background: #64c29e;
 	transition: all 0.15s linear;
 }
-.link:hover::after, .link:hover .row-link__logo {
+.link:hover .img {
+	transform: scale(1.05);
+}
+.link:hover::after, .link:hover .logo-over {
 	opacity: 0.75;
 }
 
@@ -209,7 +218,7 @@ html, body {
 }
 .about .about__content {
 	width: 100%;
-	height: 65%;
+	height: 70%;
 	padding: 0 10%;
 	position: absolute;
 	z-index: 1;
@@ -221,6 +230,10 @@ html, body {
 	background: #ffffff;
 	cursor: pointer;
 	transition: all 0.15s linear;
+}
+.about .about__content p {
+	text-align: left;
+	line-height: 30px;
 }
 .about .about__content::after {
 	content: "";
@@ -237,7 +250,7 @@ html, body {
 }
 .about .about__img {
 	width: 100%;
-	height: 35%;
+	height: 30%;
 	position: absolute;
 	z-index: 0;
 	bottom: 0;
@@ -298,7 +311,7 @@ html, body {
 	grid-area: 1/3/1/4;
 }
 
-.row-link__logo {
+.logo-over {
 	position: absolute;
 	z-index: 2;
 	top: 50%;
@@ -308,4 +321,254 @@ html, body {
 	transition: all 0.15s linear;
 }
 
+.row-gallery {
+	width: 100%;
+	display: grid;
+	grid-template: repeat(2, 30vh)/repeat(6, 1fr);
+}
+.row-gallery .__img-01 {
+	position: relative;
+	grid-area: 1/1/2/2;
+}
+.row-gallery .__img-02 {
+	position: relative;
+	grid-area: 1/2/2/3;
+}
+.row-gallery .__img-03 {
+	position: relative;
+	grid-area: 1/3/3/4;
+}
+.row-gallery .__img-04 {
+	position: relative;
+	grid-area: 1/4/3/5;
+}
+.row-gallery .__img-05 {
+	position: relative;
+	grid-area: 1/5/2/7;
+}
+.row-gallery .__img-06 {
+	position: relative;
+	grid-area: 2/1/3/3;
+}
+.row-gallery .__img-07 {
+	position: relative;
+	grid-area: 2/5/3/6;
+}
+.row-gallery .__img-08 {
+	position: relative;
+	grid-area: 2/6/3/7;
+}
+
+.row-button {
+	height: 25vh;
+	min-height: 200px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	background: #282f35;
+}
+
+.button-case {
+	width: auto;
+	height: auto;
+	position: relative;
+}
+.button-case::before {
+	content: "";
+	width: 100%;
+	height: 3px;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: translate(-100%);
+	background: #64c29e;
+	opacity: 0;
+	transition: all 0.2s linear;
+}
+.button-case::after {
+	content: "";
+	width: 100%;
+	height: 3px;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(100%);
+	background: #64c29e;
+	opacity: 0;
+	transition: all 0.25s linear;
+}
+.button-case .__button {
+	width: 350px;
+	height: 70px;
+	margin: 0;
+	position: relative;
+	border: 3px solid #ffffff;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "Lato", sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	color: #ffffff;
+	cursor: pointer;
+	transition: all 0.15s linear;
+}
+.button-case:hover .__button {
+	color: #64c29e;
+	border: none;
+}
+.button-case:active .__button {
+	font-size: 17px;
+	box-shadow: inset 0 0 5px 3px rgba(0, 0, 0, 0.25);
+	transition: all 0.02s linear;
+}
+.button-case:hover::before, .button-case:hover::after {
+	opacity: 1;
+	transform: translate(0);
+}
+
+.row-mail {
+	height: 50vh;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	background: #ffffff;
+}
+
+.row-mail__img {
+	margin-bottom: 15px;
+}
+
+.row-mail__title {
+	margin-bottom: 30px;
+	font-family: "Lato", sans-serif;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 35px;
+	color: #848789;
+}
+
+.row-mail__form {
+	display: flex;
+	align-items: center;
+}
+.row-mail__form .mail {
+	width: 400px;
+	height: 70px;
+	margin-right: 10px;
+	padding: 30px;
+	border: 1px solid #d3d7d9;
+	font-family: "Lato", sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	color: #848789;
+	transition: all 0.15s linear;
+}
+.row-mail__form .mail::placeholder {
+	font-family: "Lato", sans-serif;
+	font-style: italic;
+	font-size: 18px;
+	font-weight: 400;
+	opacity: 1;
+	color: #d3d7d9;
+}
+.row-mail__form .mail:focus {
+	border-color: #64c29e;
+}
+.row-mail__form .button {
+	width: 125px;
+	height: 70px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "Lato", sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	color: #ffffff;
+	background: #64c29e;
+	cursor: pointer;
+	transition: all 0.15s linear;
+}
+.row-mail__form .button:hover {
+	background: #ffffff;
+	color: #64c29e;
+	border: 1px solid #64c29e;
+}
+.row-mail__form .button:active {
+	width: 115px;
+	height: 65px;
+	margin: 0 5px;
+	font-size: 22px;
+	transition: 0.05s;
+}
+
 /* FOOTER */
+.footer {
+	width: 100%;
+	height: 25vh;
+	min-height: 200px;
+	background: #f7f7f7;
+}
+
+.footer-case {
+	max-width: 1130px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer__item {
+	width: 33.333%;
+	display: flex;
+	align-items: center;
+}
+
+.footer__left {
+	flex-flow: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+.footer__left h1 {
+	font-family: "Lato", sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	color: #848789;
+}
+.footer__left i {
+	font-family: "Lato", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #848789;
+}
+
+.footer__center {
+	justify-content: center;
+}
+.footer__center a {
+	margin-right: 15px;
+}
+.footer__center a:last-child {
+	margin-right: 0;
+}
+.footer__center a:hover img {
+	opacity: 0.8;
+	transition: all 0.2s;
+}
+
+.footer__right {
+	justify-content: flex-end;
+}
+.footer__right i {
+	margin-right: 15px;
+	font-family: "Lato", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #848789;
+}

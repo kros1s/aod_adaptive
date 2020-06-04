@@ -12,15 +12,17 @@ html(lang="en")
         //- MAIN SECTION
         main(class="main")
             article(class="grid-case")
+                // START ROW TITLE
                 section(class="row-title")
                     div(class="logo"): img(src="/img/main/icon-01.png")
                     h1(class="title") A NEW GENERATION OF VINTAGE BIKE
                     p(class="text").
                         Lorem Ipsum is simply dummy about of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy about ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                // FIRST CONTENT ROW WITH LINKS
                 section(class="row-link first")
                     a(class="row-link__img link" href="#")
                         img(class="img" src="img/main/content-01.png")
-                        img(class="row-link__logo" src="img/main/logo-01.png")
+                        img(class="logo-over" src="img/main/logo-01.png")
                     div(class="about")
                         div(class="about__content")
                             div(class="logo"): img(src="/img/main/icon-02.png")
@@ -28,6 +30,7 @@ html(lang="en")
                             p(class="text").
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.
                         div(class="about__img"): img(class="img" src="img/main/content-02.png")
+                // SECOND CONTENT ROW WITH LINKS
                 section(class="row-link second")
                     div(class="about")
                         div(class="about__content")
@@ -38,11 +41,12 @@ html(lang="en")
                         div(class="about__img"): img(class="img" src="img/main/content-03.png")
                     a(class="row-link__img link" href="#")
                         img(class="img" src="img/main/content-04.png")
-                        img(class="row-link__logo" src="img/main/logo-02.png")
+                        img(class="logo-over" src="img/main/logo-02.png")
+                // FIRD CONTENT ROW WITH LINKS
                 section(class="row-link fird")
                     a(class="row-link__left-img link" href="#")
                         img(class="img" src="img/main/content-05.png")
-                        img(class="row-link__logo" src="img/main/logo-03.png")
+                        img(class="logo-over" src="img/main/logo-03.png")
                     div(class="about")
                         div(class="about__content")
                             div(class="logo"): img(src="/img/main/icon-04.png")
@@ -52,23 +56,51 @@ html(lang="en")
                         div(class="about__img"): img(class="img" src="img/main/content-06.png")
                     a(class="row-link__right-img link" href="#")
                         img(class="img" src="img/main/content-07.png")
-                        img(class="row-link__logo" src="img/main/logo-01.png")
+                        img(class="logo-over" src="img/main/logo-01.png")
+                // TWITTER ROW TITLE
                 section(class="row-title")
-                    div(class="logo"): img(src="../img/main/twitter.png")
+                    div(class="logo"): img(src="img/main/twitter.png")
                     h1(class="title")
                         a(href="#") AOD New York @aod
                         i  / 35 min
-                    p(class="text").
-                        <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.<i/>
-                //- section(class="row-gallery")
-                //-     div(class="__img-01")
-                //-     div(class="__img-02")
-                //-     div(class="__img-03")
-                //-     div(class="__img-04")
-                //-     div(class="__img-05")
-                //-     div(class="__img-06")
-                //-     div(class="__img-07")
-                //-     div(class="__img-08")
-                //- section(class="row-button")
+                    p(class="text")
+                        i Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.
+                // GALLERY SECTION
+                section(class="row-gallery")
+                    div(class="__img-01 link")
+                        img(class="img" src="img/main/gallery-01.png")
+                        img(class="logo-over" src="img/main/gallery-icon.png")
+                    div(class="__img-02 link")
+                        img(class="img" src="img/main/gallery-02.png")
+                        img(class="logo-over" src="img/main/gallery-icon.png")
+                    div(class="__img-03 link")
+                        img(class="img" src="img/main/gallery-03.png")
+                        img(class="logo-over" src="img/main/gallery-icon.png")
+                    div(class="__img-04 link")
+                        img(class="img" src="img/main/gallery-04.png")
+                        img(class="logo-over" src="img/main/gallery-icon.png")
+                    div(class="__img-05 link")
+                        img(class="img" src="img/main/gallery-05.png")
+                        img(class="logo-over" src="img/main/gallery-icon.png")
+                    div(class="__img-06 link")
+                        img(class="img" src="img/main/gallery-06.png")
+                        img(class="logo-over" src="img/main/gallery-icon.png")
+                    div(class="__img-07 link")
+                        img(class="img" src="img/main/gallery-07.png")
+                        img(class="logo-over" src="img/main/gallery-icon.png")
+                    div(class="__img-08 link")
+                        img(class="img" src="img/main/gallery-08.png")
+                        img(class="logo-over" src="img/main/gallery-icon.png")
+                // BUTTON SECTION
+                section(class="row-button")
+                    div(class="button-case")
+                        input(class="__button" type="button" value="DISCOVER THE SHOP")
+                // EMAIL SECTION
+                section(class="row-mail")
+                    img(class="row-mail__img" src="img/logo.png")
+                    h1(class="row-mail__title") Stay on the saddle!
+                    form(class="row-mail__form" action="#" method="POST" name="mail")
+                        input(class="mail" type="mail" placeholder="enter your email...")
+                        input(class="button" type="button" value="GO")
         //- IMPORT FOOTER SECTION
         include _footer.pug

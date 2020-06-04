@@ -33,7 +33,7 @@
     color: #4d4959;
     cursor: pointer;
     transition: all 0.15s linear;
-    &.text::before {
+    &._text::before {
         content: "";
         width: 100%;
         height: 1px;
@@ -46,7 +46,7 @@
         opacity: 0;
         transition: all 0.15s linear;
     }
-    &.text::after {
+    &._text::after {
         content: "";
         width: 100%;
         height: 1px;
