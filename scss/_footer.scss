@@ -1,8 +1,13 @@
 .footer {
     width: 100%;
     height: 25vh;
-    min-height: 200px;
     background: #f7f7f7;
+    @media (max-width:  $lg-max) {
+        height: 20vh;
+    }
+    @media (max-width:  $xs-max) {
+        height: auto;
+    }
 }
 
 .footer-case {
@@ -13,6 +18,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: $xs-max) {
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        .footer__left {
+            margin-top: 25px;
+            align-items: center;
+            line-height: 20px;
+        }
+        .footer__center {
+            margin-top: 25px;
+        }
+        .footer__right {
+            margin: 25px 0;
+        }
+    }
 }
 
 .footer__left {
@@ -32,6 +53,14 @@
         font-size: 16px;
         font-weight: 400;
         color: #848789;
+    }
+    @media (max-width:  $md-max) {
+        h1 {
+            font-size: 20px;
+        }
+        i {
+            font-size: 14px;
+        }
     }
 }
 
@@ -63,5 +92,10 @@
         font-size: 16px;
         font-weight: 400;
         color: #848789;
+    }
+    @media (max-width:  $md-max) {
+        i {
+            font-size: 14px;
+        }
     }
 }
